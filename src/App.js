@@ -1,8 +1,27 @@
-import logo from "./logo.svg";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
-  return <div className="App">react</div>;
+  const [count, setCount] = useState(0);
+
+  function handleIncrement() {
+    setCount((c) => c + 1);
+  }
+  function handleDecrement() {
+    setCount((c) => c - 1);
+  }
+  return (
+    <div className="App">
+      <h1>Counter App</h1>
+      <h4>Count : {count}</h4>
+      <button type="button" onClick={handleIncrement}>
+        Increment
+      </button>
+      <button type="button" onClick={handleDecrement}>
+        Decrement
+      </button>
+    </div>
+  );
 }
 
 export default App;
