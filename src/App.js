@@ -13,7 +13,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div>
       <h1>Counter App</h1>
       <h4>Count: {count}</h4>
       <button type="button" onClick={handleIncrement}>
