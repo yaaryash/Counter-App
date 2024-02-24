@@ -1,19 +1,21 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
 
   function handleIncrement() {
-    setCount((c) => c + 1);
+    setCount((prevCount) => prevCount + 1);
   }
+
   function handleDecrement() {
-    setCount((c) => c - 1);
+    setCount((prevCount) => prevCount - 1);
   }
+
   return (
     <div className="App">
       <h1>Counter App</h1>
-      <h4>Count : {count}</h4>
+      <h4>Count: {count}</h4>
       <button type="button" onClick={handleIncrement}>
         Increment
       </button>
